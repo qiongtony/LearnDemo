@@ -1,0 +1,4 @@
+include ':socketdemoserver'
+include ':socketdemoclient'
+include ':app'
+rootProject.name = "LearnDemo"
