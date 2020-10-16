@@ -1,3 +1,4 @@
+include ':Java8Demo'
 include ':socketdemoserver'
 include ':socketdemoclient'
 include ':app'
