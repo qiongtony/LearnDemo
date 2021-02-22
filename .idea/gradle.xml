@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Java8Demo" />
+            <option value="$PROJECT_DIR$/aidldemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/socketdemoclient" />
             <option value="$PROJECT_DIR$/socketdemoserver" />
