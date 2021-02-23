@@ -8,6 +8,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.example.aidldemo.aidl.BaseManualBinder;
+
 public class ManualService extends Service {
     @Nullable
     @Override
@@ -15,7 +17,7 @@ public class ManualService extends Service {
         return new ManualBinder();
     }
 
-    public class ManualBinder extends IManualAidlInterface.Stub{
+    public class ManualBinder extends BaseManualBinder {
 
         @Override
         public void addBook(long id, String name) throws RemoteException {

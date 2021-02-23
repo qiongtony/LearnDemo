@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aidldemo.aidl.BaseManualBinder;
+
 public class MainActivity extends AppCompatActivity {
 
     private ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ServiceConnection mManualSC = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            mManualAidlInterface = IManualAidlInterface.Stub.asInterface(service);
+            mManualAidlInterface = BaseManualBinder.asInterface(service);
         }
 
         @Override

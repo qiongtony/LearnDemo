@@ -34,13 +34,13 @@ import androidx.annotation.Nullable;
  *
  */
 public interface IManualAidlInterface extends IInterface {
-
+    public static final String DESCRIPTOR = "com.example.aidldemo.IManualAidlInterface";
+    // 操作的序号
+    static final int TRANSACTION_addBook = IBinder.FIRST_CALL_TRANSACTION + 0;
     void addBook(long id, String name) throws RemoteException;
 
-    public static abstract class Stub extends Binder implements IManualAidlInterface{
-        public static final String DESCRIPTOR = "com.example.aidldemo.IManualAidlInterface";
-        // 操作的序号
-        static final int TRANSACTION_addBook = IBinder.FIRST_CALL_TRANSACTION + 0;
+    /*public static abstract class Stub extends Binder implements IManualAidlInterface{
+
         public Stub() {
             this.attachInterface(this, DESCRIPTOR);
         }
@@ -72,7 +72,7 @@ public interface IManualAidlInterface extends IInterface {
                     return true;
                 }
                 case TRANSACTION_addBook:{
-                    // 反序列数据
+                    // 反序列数据,序列化和反序列化的顺序要保存一致
                     this.addBook(data.readLong(), data.readString());
                     data.enforceInterface(descriptor);
                     reply.writeNoException();
@@ -140,5 +140,5 @@ public interface IManualAidlInterface extends IInterface {
                 return DESCRIPTOR;
             }
         }
-    }
+    }*/
 }
