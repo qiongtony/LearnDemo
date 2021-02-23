@@ -4,12 +4,9 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-import com.example.aidldemo.IManualAidlInterface;
-
 public class ManualProxy implements IManualAidlInterface {
 
     IBinder mRemote;
-    public static IManualAidlInterface sDefaultImpl;
 
     public ManualProxy(IBinder remote) {
         mRemote = remote;
@@ -30,10 +27,6 @@ public class ManualProxy implements IManualAidlInterface {
         try {
             data.writeInterfaceToken(DESCRIPTOR);
             boolean status = mRemote.transact(TRANSACTION_addBook, data, reply, 0);
-            /*if (!status && getDefaultImpl() != null){
-                getDefaultImpl().addBook(id, name);
-                return;
-            }*/
             reply.readException();
         }finally {
             reply.recycle();

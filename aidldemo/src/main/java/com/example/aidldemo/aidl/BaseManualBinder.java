@@ -9,9 +9,6 @@ import android.os.RemoteException;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.aidldemo.IManualAidlInterface;
-import com.example.aidldemo.ManualService;
-
 public abstract class BaseManualBinder extends Binder implements IManualAidlInterface {
 
     public static IManualAidlInterface asInterface(IBinder obj){

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aidldemo.aidl.BaseManualBinder;
+import com.example.aidldemo.aidl.IManualAidlInterface;
 
 public class MainActivity extends AppCompatActivity {
 
