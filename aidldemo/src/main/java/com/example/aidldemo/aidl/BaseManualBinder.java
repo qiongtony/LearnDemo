@@ -28,6 +28,15 @@ public abstract class BaseManualBinder extends Binder implements IManualAidlInte
         this.attachInterface(this, DESCRIPTOR);
     }
 
+    /**
+     *
+     * @param code
+     * @param data
+     * @param reply
+     * @param flags             :0,同步调用；1（ONE_WAY）：异步调用
+     * @return
+     * @throws RemoteException
+     */
     @Override
     protected boolean onTransact(int code, @NonNull Parcel data, @Nullable Parcel reply, int flags) throws RemoteException {
         String descriptor = DESCRIPTOR;

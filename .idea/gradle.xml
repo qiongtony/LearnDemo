@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/socketdemoclient" />
             <option value="$PROJECT_DIR$/socketdemoserver" />
+            <option value="$PROJECT_DIR$/vieweventdisturbution" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
