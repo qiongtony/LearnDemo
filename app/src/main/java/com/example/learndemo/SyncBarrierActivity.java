@@ -32,11 +32,7 @@ public class SyncBarrierActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        /*Intent[] intents = new Intent[2];
-        intents[0] = new Intent(this, SecondActivity.class);
-        intents[1] = new Intent(this, ThridActivity.class);
-        startActivities(intents);*/
+        setContentView(R.layout.activity_sync_barrier);
 
         new Thread() {
             @Override

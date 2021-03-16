@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".BitmapOptActivity">
+        <Button
+            android:id="@+id/btnShowPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示图片"
+            />
+
+        <Button
+            android:id="@+id/btnShowAssetsPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示Assets的图片"
+            />
+
+        <Button
+            android:id="@+id/btnConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示修改了Config的图片"
+            />
+
+        <Button
+            android:id="@+id/btnScale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示Scale为2的图片"
+            />
+
+        <Button
+            android:id="@+id/btnUnMutable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试图片不复用"
+            />
+
+        <Button
+            android:id="@+id/btnMutable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试图片复用"
+            />
+        <Button
+            android:id="@+id/btnLargePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="大图测试"
+            />
+
+        <ImageView
+            android:id="@+id/ivGirl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
