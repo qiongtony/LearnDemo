@@ -49,6 +49,30 @@ class BitmapOptActivity : BaseActivity<ActivityBitmapOptBinding>() {
         binding.btnLargePhoto.setOnClickListener {
             startActivity(Intent(this, LargeBitmapActivity::class.java))
         }
+
+        /**
+         * 报错：
+         * android.os.TransactionTooLargeException: data parcel size 35070348 bytes
+         * 报错位置：BinderProxy.transactNative
+         */
+        binding.btnSendBitmap.setOnClickListener {
+            val intent = Intent(this, ReceiveBitmapActivity::class.java)
+            intent.putExtra("bitmap", BitmapFactory.decodeResource(this@BitmapOptActivity.resources, R.drawable.girl))
+            startActivity(intent)
+        }
+
+        binding.btnSendBitmapByPutBinder.setOnClickListener {
+            val intent = Intent(this, ReceiveBitmapActivity::class.java)
+            intent.putExtras(Bundle()
+                    .apply {
+
+            putBinder("binder", object : IRemoteGetBitmap.Stub() {
+                override fun getBitmap(): Bitmap {
+                    return BitmapFactory.decodeResource(this@BitmapOptActivity.resources, R.drawable.girl)
+                }
+            })})
+            startActivity(intent)
+        }
     }
 
     fun showPhoto(){

@@ -7,6 +7,10 @@
 
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -60,9 +64,25 @@
             android:text="大图测试"
             />
 
+        <Button
+            android:id="@+id/btnSendBitmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跨进程直接传大图"
+            />
+
+        <Button
+            android:id="@+id/btnSendBitmapByPutBinder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跨进程putBinder传大图"
+            />
+
         <ImageView
             android:id="@+id/ivGirl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+
+    </ScrollView>
 </layout>
