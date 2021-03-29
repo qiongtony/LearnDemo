@@ -20,6 +20,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.btnThirdLibrary.setOnClickListener {
             startActivity(Intent(this@MainActivity, ThirdLibraryActivity::class.java))
         }
+
+        binding.btnNative.setOnClickListener {
+            startActivity(Intent(this@MainActivity, JniActivity::class.java))
+        }
     }
 
     override fun getLayoutResId(): Int = R.layout.activity_main

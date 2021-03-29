@@ -12,8 +12,19 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        externalNativeBuild{
+            // 编译出的so库的架构:x86、x86_64
+            ndkBuild{
+                abiFilters "x86"
+            }
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    externalNativeBuild{
+        ndkBuild{
+            path "src/main/ndkBuild/Android.mk"
+        }
     }
 
     buildTypes {

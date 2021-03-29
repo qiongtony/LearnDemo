@@ -33,5 +33,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="第三方分析" />
+
+        <Button
+            android:id="@+id/btnNative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Native调用" />
     </LinearLayout>
 </layout>
