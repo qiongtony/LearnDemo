@@ -10,9 +10,9 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LargeBitmapActivity">
+        tools:context=".bitmap.LargeBitmapActivity">
 
-        <com.example.learndemo.LargeImageView
+        <com.example.learndemo.bitmap.LargeImageView
             android:id="@+id/iv_large"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

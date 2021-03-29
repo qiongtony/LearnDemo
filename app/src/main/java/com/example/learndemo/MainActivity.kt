@@ -1,11 +1,10 @@
 package com.example.learndemo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.databinding.DataBindingUtil
+import com.example.learndemo.bitmap.BitmapOptActivity
 import com.example.learndemo.databinding.ActivityMainBinding
+import com.example.learndemo.thirdlibrary.ThirdLibraryActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +15,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
         binding.btnSyncBarrier.setOnClickListener {
             startActivity(Intent(this@MainActivity, SyncBarrierActivity::class.java))
+        }
+
+        binding.btnThirdLibrary.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ThirdLibraryActivity::class.java))
         }
     }
 

@@ -26,5 +26,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Handler的同步屏障" />
+
+        <Button
+            android:id="@+id/btnThirdLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="第三方分析" />
     </LinearLayout>
 </layout>

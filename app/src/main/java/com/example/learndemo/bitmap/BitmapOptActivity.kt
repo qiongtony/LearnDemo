@@ -1,4 +1,4 @@
-package com.example.learndemo
+package com.example.learndemo.bitmap
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import com.example.learndemo.*
 import com.example.learndemo.databinding.ActivityBitmapOptBinding
 import kotlin.concurrent.thread
 

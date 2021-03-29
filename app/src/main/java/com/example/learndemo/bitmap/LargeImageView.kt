@@ -1,14 +1,13 @@
-package com.example.learndemo
+package com.example.learndemo.bitmap
 
 import android.content.Context
 import android.graphics.*
-import android.graphics.drawable.Drawable
-import android.text.TextPaint
 import android.util.AttributeSet
 import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import com.example.learndemo.R
 import java.io.InputStream
 import java.lang.Exception
 

@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReceiveBitmapActivity"
-            android:process=":remote"
-            />
-        <activity android:name=".LargeBitmapActivity" />
-        <activity android:name=".BitmapOptActivity" />
+        <activity android:name=".thirdlibrary.ThirdLibraryActivity"></activity>
+        <activity
+            android:name=".bitmap.ReceiveBitmapActivity"
+            android:process=":remote" />
+        <activity android:name=".bitmap.LargeBitmapActivity" />
+        <activity android:name=".bitmap.BitmapOptActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
