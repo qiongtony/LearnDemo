@@ -1,3 +1,4 @@
+include ':multiprocessdemo'
 include ':vieweventdisturbution'
 include ':aidldemo'
 include ':Java8Demo'

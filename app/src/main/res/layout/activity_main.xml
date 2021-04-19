@@ -40,5 +40,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Native调用" />
+
+        <Button
+            android:id="@+id/btnOkHttp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="OkHttp" />
     </LinearLayout>
 </layout>

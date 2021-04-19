@@ -24,6 +24,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.btnNative.setOnClickListener {
             startActivity(Intent(this@MainActivity, JniActivity::class.java))
         }
+
+        binding.btnOkHttp.setOnClickListener {
+            startActivity(Intent(this@MainActivity, OkHttpActivity::class.java))
+        }
     }
 
     override fun getLayoutResId(): Int = R.layout.activity_main
