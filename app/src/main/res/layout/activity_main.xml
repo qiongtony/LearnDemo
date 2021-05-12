@@ -33,5 +33,20 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="第三方分析" />
+
+        <Button
+            android:id="@+id/btnHook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Hook测试" />
+
+        <Button
+            android:id="@+id/btnEventBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="事件总线" />
+
     </LinearLayout>
 </layout>
