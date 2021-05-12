@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
@@ -5,21 +7,61 @@ buildscript {
     }
     repositories {
         google()
-        jcenter()
+        //jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'http://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
+        // aspectj
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
         // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        // in the individual module build.gradle.kts files
+    }
+}
+
+// gradle中task的生命周期：初始化阶段、配置阶段、执行阶段
+// 定义Task，项目的构建就是执行一个个task，源头：project的build.gradle
+task A{
+    println 'this is task A'
+    doFirst{
+        // 真正执行task的过程
+        println 'this is in A execute'
+    }
+}
+
+task B{
+    // task依赖，B依赖，所以执行Task B时会先执行task A
+    dependsOn 'A'
+    println 'this is task B'
+    doFirst{
+        println 'this is in B execute'
+    }
+}
+
+// 定义方法
+def getDate(){
+    def sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA)
+    def nowDateString = "\"" + sdf.format(new Date()) + "\""
+    return nowDateString
+}
+
+task my_task{
+    doFirst{
+        println 'today is ' + getDate()
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        //jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'http://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
     }
 }
 

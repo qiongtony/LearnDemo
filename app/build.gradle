@@ -3,17 +3,27 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "com.example.learndemo"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
+        externalNativeBuild{
+            // 编译出的so库的架构:x86、x86_64
+            ndkBuild{
+                abiFilters "x86"
+            }
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    externalNativeBuild{
+        ndkBuild{
+            path "src/main/ndkBuild/Android.mk"
+        }
     }
 
     buildTypes {
@@ -30,6 +40,7 @@ android {
     dataBinding {
         enabled = true
     }
+    ndkVersion '21.0.6113669'
 }
 
 dependencies {
@@ -43,5 +54,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'org.greenrobot:eventbus:3.2.0'
+    // okhttp
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.1"))
+
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 
 }

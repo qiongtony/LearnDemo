@@ -17,7 +17,7 @@ class ReceiveBitmapActivity : BaseActivity<ActivityReceiveBitmapBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (intent != null && intent.extras != null) {
-            val binder = IRemoteGetBitmap.Stub.asInterface(intent.extras.getBinder("binder"))
+            val binder = IRemoteGetBitmap.Stub.asInterface(intent.extras!!.getBinder("binder"))
 
             Toast.makeText(this, "通过putBinder获取", Toast.LENGTH_SHORT).show()
             binding.ivShow.setImageBitmap(binder.bitmap)

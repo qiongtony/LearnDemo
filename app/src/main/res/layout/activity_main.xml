@@ -48,5 +48,25 @@
             android:textAllCaps="false"
             android:text="事件总线" />
 
+        <Button
+            android:id="@+id/btnNative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Native调用" />
+
+        <Button
+            android:id="@+id/btnOkHttp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="OkHttp" />
+
+        <Button
+            android:id="@+id/btnUncaughtException"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="自定义捕获异常" />
     </LinearLayout>
 </layout>
