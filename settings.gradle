@@ -1,3 +1,4 @@
+include ':everydayexamdemo'
 include ':aopdemo'
 include ':multiprocessdemo'
 include ':vieweventdisturbution'
