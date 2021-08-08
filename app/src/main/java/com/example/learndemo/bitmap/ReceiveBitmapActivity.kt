@@ -3,7 +3,7 @@ package com.example.learndemo.bitmap
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.Toast
-import com.example.learndemo.BaseActivity
+import com.example.learndemo.base.BaseActivity
 import com.example.learndemo.IRemoteGetBitmap
 import com.example.learndemo.R
 import com.example.learndemo.databinding.ActivityReceiveBitmapBinding

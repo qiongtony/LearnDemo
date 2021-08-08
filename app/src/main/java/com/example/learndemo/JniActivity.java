@@ -1,9 +1,9 @@
 package com.example.learndemo;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.learndemo.base.BaseActivity;
 import com.example.learndemo.databinding.ActivityJniBinding;
 
 public class JniActivity extends BaseActivity<ActivityJniBinding> {

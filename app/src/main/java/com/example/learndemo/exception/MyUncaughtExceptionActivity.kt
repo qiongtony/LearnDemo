@@ -1,9 +1,8 @@
 package com.example.learndemo.exception
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.learndemo.BaseActivity
 import com.example.learndemo.R
+import com.example.learndemo.base.BaseActivity
 import com.example.learndemo.databinding.ActivityMyUncaughtExceptionBinding
 
 class MyUncaughtExceptionActivity : BaseActivity<ActivityMyUncaughtExceptionBinding>() {

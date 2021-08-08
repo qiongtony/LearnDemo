@@ -2,7 +2,7 @@ package com.example.learndemo.bitmap
 
 import android.os.Bundle
 import android.util.Log
-import com.example.learndemo.BaseActivity
+import com.example.learndemo.base.BaseActivity
 import com.example.learndemo.R
 import com.example.learndemo.databinding.ActivityLargeBitmapBinding
 import java.io.InputStream

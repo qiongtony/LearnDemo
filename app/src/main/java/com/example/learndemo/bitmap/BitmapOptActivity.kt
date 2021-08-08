@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import com.example.learndemo.*
+import com.example.learndemo.base.BaseActivity
 import com.example.learndemo.databinding.ActivityBitmapOptBinding
 import kotlin.concurrent.thread
 
