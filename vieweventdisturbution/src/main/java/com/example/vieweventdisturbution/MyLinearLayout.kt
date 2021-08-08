@@ -11,6 +11,7 @@ class  MyLinearLayout @JvmOverloads constructor(context: Context?, attributeSet:
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         Log.i(javaClass.simpleName, "onInterceptTouchEvent event = ${ev?.actionMasked}")
         return ev?.actionMasked ==  MotionEvent.ACTION_DOWN/*MotionEvent.ACTION_MOVE*/
+//        return false
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {

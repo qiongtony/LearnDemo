@@ -3,6 +3,7 @@ package com.example.aopdemo.aop;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.aopdemo.Constants;
@@ -58,6 +59,21 @@ public class AspectUtil {
             Toast.makeText(context, "请进行登录！", Toast.LENGTH_SHORT).show();
             context.startActivity(new Intent(context, LoginActivity.class));
 
+        }
+    }
+
+    // 切入点是OnClickListener的OnClick方法
+    @Pointcut("execution(void android.view.View.OnClickListener.onClick(..))")
+    public void methodViewOnClick(){
+
+    }
+
+    @Around("methodViewOnClick()")
+    public void aroundViewOnClick(ProceedingJoinPoint joinPoint) throws Throwable {
+        View target = (View)joinPoint.getArgs()[0];
+        Log.e("WWS", "target = " + target.getId());
+        if (!FastClickCheckUtil.isFastClick(target, 2000)){
+            joinPoint.proceed();
         }
     }
 }

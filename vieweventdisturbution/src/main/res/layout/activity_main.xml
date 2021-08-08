@@ -19,4 +19,10 @@
        android:background="@android:color/holo_green_light"
        />
 
+   <Button
+       android:id="@+id/btnJumpToCustomChildrenOrderPage"
+       android:layout_width="wrap_content"
+       android:text="跳转到自定义获取子View顺序页"
+       android:layout_height="wrap_content"/>
+
 </com.example.vieweventdisturbution.MyLinearLayout>

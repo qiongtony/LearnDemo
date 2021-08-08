@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.vieweventdisturbution.CustomOrderFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomGetChildrenOrderActivity">
+
+    <!--正常应该是绿色在上，紫色在下，但由于自定义了顺序，导致紫色在上，绿色在下-->
+
+    <Button
+        android:id="@+id/btnPurple"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="紫色"
+        android:background="@android:color/holo_purple"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/btnGreen"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:text="绿色"
+        android:background="@android:color/holo_green_light"
+        />
+</com.example.vieweventdisturbution.CustomOrderFrameLayout>
