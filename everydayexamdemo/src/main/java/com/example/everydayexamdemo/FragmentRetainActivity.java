@@ -1,5 +1,7 @@
 package com.example.everydayexamdemo;
 
+import android.Manifest;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -17,6 +19,11 @@ public class FragmentRetainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_retain);
         Fragment fragment = getSupportFragmentManager().findFragmentByTag("blank");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+            }, 100);
+        }
         if (fragment == null){
             fragment = BlankFragment.newInstance();
         }

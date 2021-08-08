@@ -23,5 +23,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, FragmentRetainActivity.class));
             }
         });
+        binding.btnJumpToExceptionPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UncaughExceptionActivity.class));
+            }
+        });
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        Log.e("WWS", "onWindowFocusChanged");
     }
 }
