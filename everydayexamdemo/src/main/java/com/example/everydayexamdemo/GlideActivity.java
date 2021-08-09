@@ -1,6 +1,4 @@
-package com.example.test.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.everydayexamdemo;
 
 import android.Manifest;
 import android.os.Build;
@@ -9,19 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.test.R;
+import com.example.everydayexamdemo.databinding.ActivityGlideBinding;
+
 
 public class GlideActivity extends AppCompatActivity {
-    private ImageView ivIcon;
-    private Button btnLoad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_glide);
-        ivIcon = findViewById(R.id.iv_icon);
-        btnLoad = findViewById(R.id.btnLoad);
+        ActivityGlideBinding binding = ActivityGlideBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{
                     Manifest.permission.INTERNET,
@@ -30,13 +27,23 @@ public class GlideActivity extends AppCompatActivity {
 
             }, 100);
         }
-        btnLoad.setOnClickListener(new View.OnClickListener() {
+        binding.btnLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Glide.with(GlideActivity.this).load(R.drawable.icon_7).into(ivIcon);
                 // 20m
                 Glide.with(GlideActivity.this).load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
-                        .into(ivIcon);
+                        .into(binding.ivIcon);
+            }
+        });
+
+        binding.btnLoadToBigIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Glide.with(GlideActivity.this).load(R.drawable.icon_7).into(ivIcon);
+                // 20m
+                Glide.with(GlideActivity.this).load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
+                        .into(binding.ivBigIcon);
             }
         });
 

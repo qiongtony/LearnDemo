@@ -18,4 +18,11 @@
         android:layout_height="wrap_content"
         android:text="跳到异常捕获页" />
 
+    <Button
+        android:id="@+id/btnJumpToGlidePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳到Glide测试页" />
+
+
 </LinearLayout>

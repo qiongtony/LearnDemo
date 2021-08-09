@@ -24,6 +24,7 @@
         <activity android:name=".FragmentRetainActivity">
 
         </activity>
+        <activity android:name=".GlideActivity"/>
     </application>
 
 </manifest>
