@@ -1,13 +1,14 @@
 package com.example.everydayexamdemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.everydayexamdemo.databinding.ActivityMainBinding;
+import com.example.everydayexamdemo.designmode.charcter_11_command.CustomDrawActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,25 +17,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.btnJumpToFragmentRetainPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("WWS", "click btnJumpToFragmentRetainPage");
-                startActivity(new Intent(MainActivity.this, FragmentRetainActivity.class));
-            }
+        binding.btnJumpToFragmentRetainPage.setOnClickListener(v -> {
+            Log.e("WWS", "click btnJumpToFragmentRetainPage");
+            openPage(FragmentRetainActivity.class);
         });
-        binding.btnJumpToExceptionPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, UncaughExceptionActivity.class));
-            }
-        });
-        binding.btnJumpToGlidePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GlideActivity.class));
-            }
-        });
+        binding.btnJumpToExceptionPage.setOnClickListener(v -> openPage(UncaughExceptionActivity.class));
+        binding.btnJumpToGlidePage.setOnClickListener(v -> openPage(GlideActivity.class));
+        binding.btnJumpToDrawViewPage.setOnClickListener(v -> openPage(CustomDrawActivity.class));
+
+    }
+
+    private void openPage(Class<?> clazz) {
+        startActivity(new Intent(MainActivity.this, clazz));
     }
 
     @Override

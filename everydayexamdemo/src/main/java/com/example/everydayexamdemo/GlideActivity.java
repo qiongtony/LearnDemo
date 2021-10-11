@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.everydayexamdemo.databinding.ActivityGlideBinding;
 
 
@@ -32,7 +33,9 @@ public class GlideActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Glide.with(GlideActivity.this).load(R.drawable.icon_7).into(ivIcon);
                 // 20m
-                Glide.with(GlideActivity.this).load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
+                Glide.with(GlideActivity.this)
+                        .load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(binding.ivIcon);
             }
         });
@@ -42,7 +45,9 @@ public class GlideActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Glide.with(GlideActivity.this).load(R.drawable.icon_7).into(ivIcon);
                 // 20m
-                Glide.with(GlideActivity.this).load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
+                Glide.with(GlideActivity.this)
+                        .load("https://seopic.699pic.com/photo/40011/0709.jpg_wh1200.jpg")
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(binding.ivBigIcon);
             }
         });

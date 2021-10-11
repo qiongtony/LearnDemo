@@ -6,14 +6,16 @@ buildscript {
         kotlin_version = '1.3.72'
     }
     repositories {
-        google()
-        //jcenter()
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'http://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        //        google()
+//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/'}
+        maven { url 'https://maven.aliyun.com/repository/jcenter/'}
+
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath 'com.android.tools.build:gradle:4.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // aspectj
@@ -57,11 +59,13 @@ task my_task{
 
 allprojects {
     repositories {
-        google()
-        //jcenter()
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'http://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        //        google()
+//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/'}
+        maven { url 'https://maven.aliyun.com/repository/jcenter/'}
+
+        maven { url 'https://jitpack.io' }
     }
 }
 
