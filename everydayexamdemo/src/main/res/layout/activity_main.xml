@@ -30,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="跳到画图页" />
 
+    <Button
+        android:id="@+id/btnJumpToMemotoPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳到备忘录页" />
+
 </LinearLayout>

@@ -3,11 +3,11 @@ package com.example.everydayexamdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.everydayexamdemo.databinding.ActivityMainBinding;
+import com.example.everydayexamdemo.designmode.character_13_memento.NoteActivity;
 import com.example.everydayexamdemo.designmode.charcter_11_command.CustomDrawActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         binding.btnJumpToExceptionPage.setOnClickListener(v -> openPage(UncaughExceptionActivity.class));
         binding.btnJumpToGlidePage.setOnClickListener(v -> openPage(GlideActivity.class));
         binding.btnJumpToDrawViewPage.setOnClickListener(v -> openPage(CustomDrawActivity.class));
-
+        binding.btnJumpToMemotoPage.setOnClickListener(v -> openPage(NoteActivity.class));
     }
 
     private void openPage(Class<?> clazz) {
