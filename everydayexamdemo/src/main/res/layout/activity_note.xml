@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".designmode.character_13_memento.NoteActivity">
+    tools:context=".designmode.chapter_13_memento.NoteActivity">
 
-    <com.example.everydayexamdemo.designmode.character_13_memento.NoteEditText
+    <com.example.everydayexamdemo.designmode.chapter_13_memento.NoteEditText
         android:id="@+id/et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

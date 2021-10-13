@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnDemo">
-        <activity android:name=".designmode.character_13_memento.NoteActivity"></activity>
-        <activity android:name=".designmode.charcter_11_command.CustomDrawActivity" />
+        <activity android:name=".designmode.chapter_13_memento.NoteActivity"></activity>
+        <activity android:name=".designmode.chapter_11_command.CustomDrawActivity" />
         <activity android:name=".UncaughExceptionActivity" />
         <activity android:name=".TestMainActivity" />
         <activity android:name=".MainActivity">

@@ -1,4 +1,4 @@
-package com.example.everydayexamdemo.designmode.character_13_memento
+package com.example.everydayexamdemo.designmode.chapter_13_memento
 
 class Caretaker() {
     val memotos = arrayListOf<Memoto>()

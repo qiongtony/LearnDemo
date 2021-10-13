@@ -1,4 +1,4 @@
-package com.example.everydayexamdemo.designmode.charcter_11_command
+package com.example.everydayexamdemo.designmode.chapter_11_command
 
 import android.animation.ValueAnimator
 import android.content.Context

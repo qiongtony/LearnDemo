@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".designmode.charcter_11_command.CustomDrawActivity">
+    tools:context=".designmode.chapter_11_command.CustomDrawActivity">
 
-    <com.example.everydayexamdemo.designmode.charcter_11_command.DrawView
+    <com.example.everydayexamdemo.designmode.chapter_11_command.DrawView
         android:id="@+id/drawView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

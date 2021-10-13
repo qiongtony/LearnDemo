@@ -1,4 +1,4 @@
-package com.example.everydayexamdemo.designmode.charcter_11_command
+package com.example.everydayexamdemo.designmode.chapter_11_command
 
 // 命令模式的简要demo，特点请求者与接收者解耦，让一个命令的请求与执行不要耦合在一起
 
